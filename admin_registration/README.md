@@ -27,9 +27,9 @@
     - How does the response you receive after registration help answer the first question?
 
 ## What do you need to solve the challenge?
-- OWASP Juice Shop
+- **OWASP Juice Shop**
     - registration page `http://127.0.0.1:3000/#/register`
-- Burpsuite - <a href="https://portswigger.net/burp">Click here for more information</a>
+- **Burpsuite** - <a href="https://portswigger.net/burp">Click here for more information</a>
     - Proxy Server
     - HTTP history
     - Intercept mode
