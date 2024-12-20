@@ -42,8 +42,7 @@
 - <ins>What do you see?</ins> 
     - On the left side there is the registration POST request with the dummy data. 
     - On the right side there is shown the response. The dummy data was expanded, among others things, with the parameter: `"role": "customer"`.
-        - **BILD EINFÜGEN**
-        - <img alt="response_role" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/admin_registration/response_role.png"></img>
+<img alt="response_role" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/admin_registration/response_role.png"></img>
 - <ins>What does that mean?</ins>
     - The parameter `role` defines the user status.
     - There must be a way to specify it when registering.
@@ -60,7 +59,7 @@
 - Change to the **HTTP history** tab and have a look at the response:
     - The parameter was successfully added to the user account. The user kazuto has the status `admin`.
     - **BILD EINFÜGEN**
-    - <img alt="response" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/admin_registration/response"></img>
+    - <img alt="response" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/admin_registration/response.png"></img>
 - The OWASP Juice Shop gives the following feedback with confetti:
     - `You successfully solved a challenge: Admin Registration (Register as a user with administrator privileges.)`
 
