@@ -36,7 +36,8 @@
     - Modern frameworks often include built-in mechanisms to prevent improper input handling.
 
 ### <ins>2) Broken Authentication</ins>
-**Broken Authentication** is a security vulnerability where an application’s authentication mechanisms are poorly implemented or configured, allowing attackers to take over user accounts or access protected resources. This vulnerability is listed in the OWASP Top 10 and represents a serious threat to web applications.
+**Broken Authentication** is a security vulnerability where an application’s authentication mechanisms are poorly implemented or configured, allowing attackers to take over user accounts or access protected resources. This vulnerability is listed in the OWASP Top 10 and represents a serious threat to web applications.  
+A successful attack on authentication mechanisms can grant attackers full access to user accounts and their sensitive data. In the worst-case scenario, an attacker could gain administrative privileges and compromise the entire application.
 
 ### Causes of Broken Authentication
 1) **Weak Password Implementation**:
@@ -54,6 +55,39 @@
     - Session IDs are predictable or easy to guess.
     - No protection against session hijacking (e.g., missing Secure or HttpOnly flags on cookies).
 5) **Insecure Password Recovery Mechanisms**:
-    - <ins>Easily guessable security questions</ins>.
+    - <ins>Easily guessable security questions or their answers</ins>.
         - **Challenge**: <a href="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/bjoern's_favorite_pet">Björn's Favorite Pet</a>
     - Password reset links with no expiration or insufficient security measures.
+
+### Possible Attacks
+1) **Credential Stuffing**:
+    - Attackers use a list of usernames and passwords from data breaches to log into an application.
+2) **Brute-Force Attacks**:
+    - Attackers systematically try different passwords until the correct one is found.
+3) **Session Hijacking**:
+    - Attackers steal an active session ID to gain access to a victim’s account.
+4) **Man-in-the-Middle Attacks**:
+    - Credentials are transmitted insecurely over unencrypted channels (e.g., HTTP instead of HTTPS).
+5) **Password Reset Manipulation**:
+    - Attackers guess security questions or manipulate password reset mechanisms.
+
+### Preventive Measures Against Broken Authentication
+1) Enforce Strong Password Policies:
+    - Require password complexity and a minimum length.
+    - Enable multi-factor authentication (MFA).
+2) Limit Login Attempts:
+    - Lock accounts after several failed attempts.
+    - Introduce delays for repeated requests (rate-limiting).
+3) Secure Password Storage:
+    - Hash passwords using strong algorithms such as bcrypt, Argon2, or PBKDF2.
+    - Add salts to prevent rainbow table attacks.
+4) Secure Session Management:
+    - Invalidate session IDs after logout or timeout.
+    - Set cookies with Secure, HttpOnly, and SameSite flags.
+5) Defend Against Credential Stuffing:
+    - Check passwords against known breach databases (e.g., using the Have I Been Pwned API).
+    - Use captchas or additional authentication steps.
+6) Monitoring and Logging:
+    - Detect and respond to unusual login patterns (e.g., multiple failed login attempts).
+7) Regular Security Testing:
+    - Conduct penetration tests to identify and fix vulnerabilities.
