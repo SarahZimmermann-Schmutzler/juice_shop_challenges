@@ -39,10 +39,10 @@ OR
 
 ## Solution
 ### Step 1: Find a Foto or Video that shows a pet
-- Would like to know more about Björn. Maybe he left a review. Search for "bjoern" on the product page using the developer tool's Inspect Mode.
-    - Result: His full name is `Björn Kimminich`.
+- Would like to know more about Björn. Maybe he left a review. Search for `bjoern` on the product page using the developer tool's Inspect Mode.
+    - <ins>Result</ins>: His full name is `Björn Kimminich`.
 - Now the clue says Björn's pet can be seen on a photo or in a video.
-    - Among the one-star tasks, there is a task called "Missing Encoding", which involves making a cat photo visible in the photo gallery.
+    - Among the one-star tasks, there is a task called `Missing Encoding`, which involves making a cat photo visible in the photo gallery.
         - Have a look at the photo wall:
             ```
             http://127.0.0.1:3000/#/photo-wall
@@ -52,7 +52,7 @@ OR
             - >i: This is a dead end here. It's the right cat but Zatschi is her pet name, not the pet's name. Haha, how ironic.
     - If all else fails, ask Daddy Google and his image search option:
         - Search query: `björn kimminich owasp`
-        - Result: An **Instagram** post from @bkimminich that shows Zatschi alias `Zaya`.
+        - <ins>Result</ins>: An **Instagram** post from @bkimminich that shows Zatschi alias `Zaya`.  
         <img alt="Zaya" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/bjoern's_favorite_pet/zaya.png"></img>
 
 ### Step 2: Try to reset Bjoern's password
@@ -64,17 +64,21 @@ OR
     - Email: `bjoern@owasp.org`
     - Security Question: `Zaya`
     - New Password: `abc123`
-    - Repeat Password: `abc123`
+    - Repeat Password: `abc123`  
     <img alt="Forgotten Password Form" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/bjoern's_favorite_pet/forgotten-pwd.png"></img>
 - You will be rewarded with confetti and a message:
-    - You successfully solved a challenge: Bjoern's Favorite Pet (Reset the password of Bjoern's OWASP account via the Forgot Password mechanism with the original answer to his security question.)
+    - *You successfully solved a challenge: Bjoern's Favorite Pet (Reset the password of Bjoern's OWASP account via the Forgot Password mechanism with the original answer to his security question.)*
 
 
 ### Step 3: Shouldn't the task have been solved with the **Burp Intruder**?
-- What ist the **Burp Intruder?
+- What ist the **Burp Intruder**?
     - The Burp Intruder is a powerful tool within the **Burp Suite** used to carry out automated attacks on web applications. For example it is used for Brute-Force-Attacks.
-    - You can bruteforce the answer to the security question, but you need a suitable word list. I haven't found any that contain the name Zaya. Neither a first name list nor a list with pet names.
+    - You can bruteforce the answer to the security question, but you need a suitable word list. I haven't found any that contain the name *Zaya*. Neither a first name list nor a list with pet names.
 
 ## Summary
-In this challenge there is given a scenario of **Improper Input Validation** leading to a so-called **Privilege Escalation**.   
-The user's entries in the registration form are not checked before they are further processed. Using Burpsuite, it was possible to intercept the HTTP request and manipulate it - adding the key-value pair `"role":"admin"` to the payload - so that the user gets administrative priviliges. Actually, this parameter is not entered via the input mask. By default, each user is set a `"custumer"` status.
+In this challenge there is given a scenario of **Broken Authentication** because of an easily guessable answer of the security question. The security question was provided with the task, but is also displayed in the *Forgot-Pasword-Form* as soon as you have entered the email address. The answer to the question was easily found because the user loves to share pictures of his pet. In short, information that the victim shares voluntarily and publicly were used to guess sensitive data such as passwords. This procedure is called **Social Engineering or OSINT (Open Source Intelligence)**.  
+After finding out the answer the attacker can reset the password using the password reset mechanism (**Reset Password Manipulation**).   
+Reasons for this include unauthorized access to user accounts (access to stored credit card information), misuse of the account (using the account to attack additional people (e.g. through phishing emails)), damage to reputation through publication of sensitive data, sale of the compromised account to the owner (blackmail), etc.  
+If a website does not provide safe alternatives to security questions like OTP or MFA, the responsibility falls on the user to design the answers so that they cannot be guessed or researched. Use answers that are not directly related to the question and cannot be guessed:
+- <ins>Question</ins>: `What is your mother's maiden name?`
+- <ins>Answer</ins>: `?!Dolphin123!?`
