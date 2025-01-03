@@ -7,7 +7,7 @@
     - SQL Injection: Inserting malicious SQL commands.
     - Command Injection: Executing system commands.
     - <ins>Privilege Escalation</ins>: Using crafted input to assign higher privileges (e.g. admin rights).
-        - **Challenge**: <a href="">Admin Registration</a>
+        - **Challenge**: <a href="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/admin_registration">Admin Registration</a>
 2) **Cross-Site Scripting (XSS)**:
     - Injecting malicious JavaScript into web applications.
 3) **Buffer Overflow**:
@@ -34,3 +34,26 @@
     - Conduct code reviews and penetration testing to identify vulnerabilities.
 6) **Utilize Secure Frameworks**:
     - Modern frameworks often include built-in mechanisms to prevent improper input handling.
+
+### <ins>2) Broken Authentication</ins>
+**Broken Authentication** is a security vulnerability where an application’s authentication mechanisms are poorly implemented or configured, allowing attackers to take over user accounts or access protected resources. This vulnerability is listed in the OWASP Top 10 and represents a serious threat to web applications.
+
+### Causes of Broken Authentication
+1) **Weak Password Implementation**:
+    - Allowing weak or easily guessable passwords.
+    - No enforcement of password complexity or length requirements.
+2) **Lack of Protection Against Brute-Force or Credential Stuffing Attacks**:
+    - No limit on login attempts.
+    - No delay for repeated failed login attempts.
+    - Allowing the reuse of passwords from compromised databases.
+3) **Insecure Password Storage**:
+    - Storing passwords in plaintext.
+    - Using weak hashing algorithms like MD5 or SHA-1.
+4) **Session Management Weaknesses**:
+    - Session IDs are not invalidated after logout or timeout.
+    - Session IDs are predictable or easy to guess.
+    - No protection against session hijacking (e.g., missing Secure or HttpOnly flags on cookies).
+5) **Insecure Password Recovery Mechanisms**:
+    - <ins>Easily guessable security questions</ins>.
+        - **Challenge**: <a href="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/bjoern's_favorite_pet">Björn's Favorite Pet</a>
+    - Password reset links with no expiration or insufficient security measures.
