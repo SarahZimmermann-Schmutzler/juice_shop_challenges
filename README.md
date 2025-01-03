@@ -1,3 +1,5 @@
+The information about the security vulnerabilities was provided by **ChatGPT**.
+
 ## Vulnerabilities
 ### <ins>1) Improper Input Validation</ins>
 **Improper Input Validation** is a security vulnerability that occurs when a system does not adequately or correctly validate user inputs before processing them. The lack of proper validation can lead to errors, unexpected behavior, or exploitation by malicious actors. By implementing robust input validation, many attack vectors can be mitigated early, as malicious inputs will be identified and blocked before they reach sensitive parts of the system.
