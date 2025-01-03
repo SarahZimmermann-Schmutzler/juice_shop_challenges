@@ -82,4 +82,5 @@
 
 ## Summary
 In this challenge there is given a scenario of **Improper Input Validation** leading to a so-called **Privilege Escalation**.   
-The user's entries in the registration form are not checked before they are further processed. Using Burpsuite, it was possible to intercept the HTTP request and manipulate it - adding the key-value pair `"role":"admin"` to the payload - so that the user gets administrative priviliges. Actually, this parameter is not entered via the input mask. By default, each user is set a `"custumer"` status.
+The user's entries in the registration form are not checked before they are further processed. Using Burpsuite, it was possible to intercept the HTTP request and manipulate it - adding the key-value pair `"role":"admin"` to the payload - so that the user gets administrative priviliges. Actually, this parameter is not entered via the input mask. By default, each user is set a `"custumer"` status.  
+Developers bear the primary responsibility for preventing and fixing such vulnerabilities - Ensuring roles and permissions are controlled server-side and implementation input validation and security reviews. Users have limited options - They only can report the vulnerability if they find one and avoid insecure platforms.
