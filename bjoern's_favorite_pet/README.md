@@ -26,6 +26,17 @@
     - Use the **Burp Intruder**.
 
 ## What do you need to solve the challenge?
+- If it's not included in the task
+    - Bjoern's email address
+        - In the task `Admin Registration` a user was registered with admin status. The administration page, that can be used with this user or the admin account, shows the registered users. 
+            ```
+            http://127.0.0.1:3000/#/administration
+            ```
+        - There you can find Björn's email address regarding to his owasp account.
+            - `bjoern@owasp.org`
+        - >i: Do not use *bjoern@juice-sh.op*. To this account belongs another security question.
+    - Bjoern's security question
+        - >i: Once you find out the email address and enter it into the *Forgotten-Password-Form*, the security question appears automatically 
 - **OWASP Juice Shop**
     - All Products page: `http://127.0.0.1:3000/#/`
     - Photo Wall: `http://127.0.0.1:3000/#/photo-wall`
@@ -56,7 +67,7 @@ OR
         <img alt="Zaya" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/bjoern's_favorite_pet/zaya.png"></img>
 
 ### Step 2: Try to reset Bjoern's password
-- Open the login page and select `Forgot your password?`` or go directly to the page:
+- Open the login page and select `Forgot your password?` or go directly to the page:
     ```
     http://127.0.0.1:3000/#/forgot-password
     ```
