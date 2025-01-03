@@ -26,17 +26,18 @@
     - Use the **Burp Intruder**.
 
 ## What do you need to solve the challenge?
-- If it's not included in the task
+- If it's not included in the task:
     - Bjoern's email address
         - In the task `Admin Registration` a user was registered with admin status. The administration page, that can be used with this user or the admin account, shows the registered users. 
             ```
             http://127.0.0.1:3000/#/administration
             ```
-        - There you can find Björn's email address regarding to his owasp account.
+        - There you can find Björn's email address regarding to his owasp account:
             - `bjoern@owasp.org`
-        - >i: Do not use *bjoern@juice-sh.op*. To this account belongs another security question.
+        - >i: Do not use *bjoern@juice-sh.op*. This address machtes with another security question.
     - Bjoern's security question
-        - >i: Once you find out the email address and enter it into the *Forgotten-Password-Form*, the security question appears automatically 
+        - Once you find out the email address and enter it into the *Forgotten-Password-Form*, the security question appears automatically
+            - `Name of your favorite pet?`
 - **OWASP Juice Shop**
     - All Products page: `http://127.0.0.1:3000/#/`
     - Photo Wall: `http://127.0.0.1:3000/#/photo-wall`
@@ -53,8 +54,8 @@ OR
 - Would like to know more about Björn. Maybe he left a review. Search for `bjoern` on the product page using the developer tool's Inspect Mode.
     - <ins>Result</ins>: His full name is `Björn Kimminich`.
 - Now the clue says Björn's pet can be seen on a photo or in a video.
-    - Among the one-star tasks, there is a task called `Missing Encoding`, which involves making a cat photo visible in the photo gallery.
-        - Have a look at the photo wall:
+    - The one-star task called `Missing Encoding` involves making a cat photo visible in the photo gallery.
+        - So, have a look at the photo wall:
             ```
             http://127.0.0.1:3000/#/photo-wall
             ```
@@ -63,11 +64,11 @@ OR
             - >i: This is a dead end here. It's the right cat but Zatschi is her pet name, not the pet's name. Haha, how ironic.
     - If all else fails, ask Daddy Google and his image search option:
         - Search query: `björn kimminich owasp`
-        - <ins>Result</ins>: An **Instagram** post from @bkimminich that shows Zatschi alias `Zaya`.  
+        - <ins>Result</ins>: An Instagram post from **@bkimminich** that shows Zatschi alias `Zaya`.  
         <img alt="Zaya" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/bjoern's_favorite_pet/zaya.png"></img>
 
 ### Step 2: Try to reset Bjoern's password
-- Open the login page and select `Forgot your password?` or go directly to the page:
+- Open the login page and select `Forgot your password?` or go directly to the password reset page:
     ```
     http://127.0.0.1:3000/#/forgot-password
     ```
@@ -84,10 +85,10 @@ OR
 ### Step 3: Shouldn't the task have been solved with the **Burp Intruder**?
 - What ist the **Burp Intruder**?
     - The Burp Intruder is a powerful tool within the **Burp Suite** used to carry out automated attacks on web applications. For example it is used for Brute-Force-Attacks.
-    - You can bruteforce the answer to the security question, but you need a suitable word list. I haven't found any that contain the name *Zaya*. Neither a first name list nor a list with pet names.
+    - You can bruteforce the answer to the security question, but you need a suitable word list. I haven't found any that contains the name *Zaya*. Neither a first name list nor a list with pet names.
 
 ## Summary
-In this challenge there is given a scenario of **Broken Authentication** because of an easily guessable answer of the security question. The security question was provided with the task, but is also displayed in the *Forgot-Pasword-Form* as soon as you have entered the email address. The answer to the question was easily found because the user loves to share pictures of his pet. In short, information that the victim shares voluntarily and publicly were used to guess sensitive data such as passwords. This procedure is called **Social Engineering or OSINT (Open Source Intelligence)**.  
+In this challenge there is given a scenario of **Broken Authentication** because of an easily guessable answer of the security question. The security question was provided with the task, but is also displayed in the *Forgot-Password-Form* as soon as you have entered the email address. The answer to the question was easily found because the user loves to share pictures of his pet. In short, information that the victim shares voluntarily and publicly were used to guess sensitive data such as passwords. This procedure is called **Social Engineering or OSINT (Open Source Intelligence)**.  
 After finding out the answer the attacker can reset the password using the password reset mechanism (**Reset Password Manipulation**).   
 Reasons for this include unauthorized access to user accounts (access to stored credit card information), misuse of the account (using the account to attack additional people (e.g. through phishing emails)), damage to reputation through publication of sensitive data, sale of the compromised account to the owner (blackmail), etc.  
 If a website does not provide safe alternatives to security questions like OTP or MFA, the responsibility falls on the user to design the answers so that they cannot be guessed or researched. Use answers that are not directly related to the question and cannot be guessed:
