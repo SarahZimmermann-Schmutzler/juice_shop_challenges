@@ -86,7 +86,7 @@
 - Go back to the administration page (not proxy server) and refresh it. The JavaScript code runs correctly - an **alert window** appears and its message says: `xss`.  
 <img alt="popup" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/popup.png"></img>
 
-- The tabe of the Registered User looks like this:  
+- The table of the Registered User looks like this:  
 <img alt="table_registered_user" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/table.png"></img>
 
 - And the the details of the xss-User like that:  
