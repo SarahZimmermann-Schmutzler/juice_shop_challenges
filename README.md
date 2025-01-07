@@ -7,7 +7,7 @@ The content is created as part of my training at the **Developer Academy** and i
 1. <a href="#introducing-the-owasp-juice-shop">Introducing the OWASP Juice Shop</a>   
     - <a href="#what-is-a-owasp-juice-shop-and-what-can-i-buy-there">What is a OWASP Juice Shop and what can I buy there?</a>
     - <a href="#what-is-a-owasp-top-ten">What is a OWASP Top Ten?</a>
-2. <a href="#what-vulnerabilities-lurk-in-web-applications-and-why-should-you-care">What vulnerabilities lurk in web applications and why should you care?</a>  
+2. <a href="#what-vulnerabilities-lurk-in-web-applications-and-why-should-I-care">What vulnerabilities lurk in web applications and why should I care?</a>  
     - <a href="#1-improper-input-validation">Improper Input Validation</a>
     - <a href="#2-broken-authentication">Broken Authentication</a>
     - <a href="#3-xss---cross-site-scripting">XSS - Cross-Site Scripting</a>
@@ -31,7 +31,7 @@ The OWASP Top Ten is a list of the most common and critical web application secu
 
 
 
-## What vulnerabilities lurk in web applications and why should you care?
+## What vulnerabilities lurk in web applications and why should I care?
 The information about the security vulnerabilities was provided by **ChatGPT**.  
   
 You will find the links to the appropriate challenges in the text.
