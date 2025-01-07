@@ -5,8 +5,13 @@ The content is created as part of my training at the **Developer Academy** and i
 
 ## Table of Contents
 1. <a href="#introducing-the-owasp-juice-shop">Introducing the OWASP Juice Shop</a>   
+    - <a href="#what-is-a-owasp-juice-shop-and-what-can-i-buy-there">What is a OWASP Juice Shop and what can I buy there?</a>
+    - <a href="#what-is-a-owasp-top-ten">What is a OWASP Top Ten?</a>
 2. <a href="#what-vulnerabilities-lurk-in-web-applications-and-why-should-you-care">What vulnerabilities lurk in web applications and why should you care?</a>  
-2. <a href="#list-of-solved-challenges-so-far">List of solved challenges so far</a> 
+    - <a href="#1-improper-input-validation">Improper Input Validation</a>
+    - <a href="#2-broken-authentication">Broken Authentication</a>
+    - <a href="#3-xss---cross-site-scripting">XSS - Cross-Site Scripting</a>
+3. <a href="#list-of-solved-challenges-so-far">List of solved challenges so far</a> 
 
 
 ## Introducing the OWASP Juice Shop
