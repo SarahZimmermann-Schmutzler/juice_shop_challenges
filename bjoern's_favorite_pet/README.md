@@ -8,7 +8,7 @@
 
 ## Profile
 #### Difficulty
-- 3-Start-Challenge
+- 3-Star-Challenge
 
 #### Category:
 - Broken Authentication

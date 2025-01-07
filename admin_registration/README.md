@@ -8,7 +8,7 @@
 
 ## Profile
 #### Difficulty
-- 3-Start-Challenge
+- 3-Star-Challenge
 
 #### Category:
 - Improper Input Validation
@@ -21,7 +21,7 @@
 
 #### Hints from the Developer Akademie
 - For this challenge, create a new account in the OWASP Juice Shop. To do this, use the email address `kazuto@kirigaya.sao`. This account should have the same permissions as the admin account `admin@juice-sh.op`.
-    >i: I misspelled the domain name horribly. I called registered the user under: `kazuto@kirigaia.saop`
+    >i: I misspelled the domain name horribly. I registered the user under: `kazuto@kirigaia.saop`. That's why copy before remembering :D
 - The following questions will help you solve the challenge:
     - How do you determine whether you are an `admin` or a `customer` when you register?
     - How does the response you receive after registration help answer the first question?
