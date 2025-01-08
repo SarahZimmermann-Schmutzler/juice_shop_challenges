@@ -1,4 +1,5 @@
 # Client-side XSS Protection
+<a href="https://go.screenpal.com/watch/cTVj2fneAOQ">Watch the video to this challenge</a>
 
 ## Table of Contents
 1. <a href="#profile">Profile</a>  
@@ -77,12 +78,12 @@
     - Fill in some dummy-data. Before clicking the *Register Button*, switch on the **Intercept mode** in the Burpsuite window to intercept the data that the form will send.
     - Find the request payload and change the parameter `"email": "your_dummy@data"` to ```"email": "<iframe src=\"javascript:alert(`xss`)\">"```  
     <img alt="payload" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/payload.png"></img>
-    - Forward the request until it is done.
+    - Forward the request until it is done and confetti appears.
     - Change to the **HTTP history** tab and have a look at the response. It adopted the entered payload as the email address:
     <img alt="payload_response" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/payload_response.png"></img>
 
 
-### Step 4: Did it work? Yesssss :) and no :(
+### Step 4: Did it work? Yesssss :)
 - Go back to the administration page (not proxy server) and refresh it. The JavaScript code runs correctly - an **alert window** appears and its message says: `xss`.  
 <img alt="popup" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/popup.png"></img>
 
@@ -91,8 +92,6 @@
 
 - And the the details of the xss-User like that:  
 <img alt="details_xss_user" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/details.png"></img>
-
-- <ins>BUT</ins>: Placing the payload in the register form and causing the alert window seems to have worked. But why isn't there any confetti and congratulations-message showing up? The task is also not checked off on the scoreboard.
 
 ## Summary
 In this challenge there is given a scenario of **XSS - Cross-Site Scripting**. A JavaScript code should be placed in a proper source causing the popup of an alert window every time the administration page is opened.    
