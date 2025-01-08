@@ -1,4 +1,5 @@
 # Admin Registration
+<a href="https://go.screenpal.com/watch/cTVjQYnez47">Watch the video to this challenge</a>
 
 ## Table of Contents
 1. <a href="#profile">Profile</a>  

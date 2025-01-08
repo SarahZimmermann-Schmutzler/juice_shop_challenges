@@ -1,4 +1,5 @@
 # Bjoern's Favorite Pet
+<a href="https://go.screenpal.com/watch/cTVj6RnezMv">Watch the video to this challenge</a>
 
 ## Table of Contents
 1. <a href="#profile">Profile</a>  
