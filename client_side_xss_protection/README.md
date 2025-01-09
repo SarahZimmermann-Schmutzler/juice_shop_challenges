@@ -4,7 +4,12 @@
 ## Table of Contents
 1. <a href="#profile">Profile</a>  
 2. <a href="#what-do-you-need-to-solve-the-challenge">What do you need to solve the challenge?</a>  
-3. <a href="#solution">Solution</a>  
+3. <a href="#solution">Solution</a> 
+    - <a href="#step-0-doing-the-xss-what">Doing the XSS what?</a>
+    - <a href="#step-1-login-with-admin-status-and-examine-the-admin-section">Login with admin status and examine the admin section</a>
+    - <a href="#step-2-it-has-to-be-placed-at-the-customer-feedback-spoiler-no-it-has-not">It has to be placed at the Customer Feedback! (Spoiler: No, it has not.)</a>
+    - <a href="#step-3-placing-the-payload-at-the-registered-users-via-the-registration-form">Placing the payload at the Registered Users via the Registration Form</a>
+    - <a href="#step-4-did-it-work-yesssss-">Did it work?</a>
 4. <a href="#summary">Summary</a> 
 
 ## Profile

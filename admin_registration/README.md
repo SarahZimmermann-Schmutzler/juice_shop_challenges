@@ -4,7 +4,11 @@
 ## Table of Contents
 1. <a href="#profile">Profile</a>  
 2. <a href="#what-do-you-need-to-solve-the-challenge">What do you need to solve the challenge?</a>  
-3. <a href="#solution">Solution</a>  
+3. <a href="#solution">Solution</a> 
+    - <a href="#step-1-register-a-dummy-user-and-have-a-look-at-the-http-response">Register a dummy user and have a look at the HTTP response</a>
+    - <a href="#step-2-examine-the-http-response">Examine the HTTP response</a>
+    - <a href="#step-3-specify-the-parameter-role-when-registering">Specify the parameter role when registering</a>
+    - <a href="#step-4-check-the-success">Check the success</a>
 4. <a href="#summary">Summary</a> 
 
 ## Profile

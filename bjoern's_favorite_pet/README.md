@@ -4,7 +4,10 @@
 ## Table of Contents
 1. <a href="#profile">Profile</a>  
 2. <a href="#what-do-you-need-to-solve-the-challenge">What do you need to solve the challenge?</a>  
-3. <a href="#solution">Solution</a>  
+3. <a href="#solution">Solution</a> 
+    - <a href="#step-1-find-a-foto-or-video-that-shows-a-pet">Find a Foto or Video that shows a pet</a>
+    - <a href="#step-2-try-to-reset-bjoerns-password">Try to reset Bjoern's password</a>
+    - <a href="#step-3-shouldnt-the-task-have-been-solved-with-the-burp-intruder">Shouldn't the task have been solved with the Burp Intruder?</a>
 4. <a href="#summary">Summary</a> 
 
 ## Profile
