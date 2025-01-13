@@ -7,9 +7,9 @@
 3. <a href="#solution">Solution</a> 
     - <a href="#step-0-doing-the-xss-what">Doing the XSS what?</a>
     - <a href="#step-1-login-with-admin-status-and-examine-the-admin-section">Login with admin status and examine the admin section</a>
-    - <a href="#step-2-it-has-to-be-placed-at-the-customer-feedback-spoiler-no-it-has-not">It has to be placed at the Customer Feedback! (Spoiler: No, it has not.)</a>
+    - <a href="#step-2-it-has-to-be-placed-at-the-customer-feedback-spoiler-this-is-the-wrong-way">It has to be placed at the Customer Feedback! (Spoiler: This is the wrong way.)</a>
     - <a href="#step-3-placing-the-payload-at-the-registered-users-via-the-registration-form">Placing the payload at the Registered Users via the Registration Form</a>
-    - <a href="#step-4-did-it-work-yesssss-">Did it work?</a>
+    - <a href="#step-4-did-it-work">Did it work?</a>
 4. <a href="#summary">Summary</a> 
 
 ## Profile
@@ -65,15 +65,15 @@
     ```
     - <ins>What do you find here?</ins> The page shows the `Registered Users` and the `Customer Feedback`.
 
-### Step 2: It has to be placed at the **Customer Feedback**! (Spoiler: No, it has not.)
+### Step 2: It has to be placed at the **Customer Feedback**! (Spoiler: This is the wrong way.)
 - Looking at **Step 0** the `Customer Feedback` feels like the perfect source to put the payload.
-- But... nope. The JavaScript code could be placed in the feedback form but the server-side validation works as it should and filters out the code.  
+- But it turns out, no. The JavaScript code could be placed in the feedback form but the server-side validation works as it should and filters out the code.  
 <img alt="feedback_form" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/feedback_form.png"></img>  
 <img alt="feedback_request_and_response" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/feedback_response.png"></img>
 
 
 ### Step 3: Placing the payload at the Registered Users via the **Registration Form**
-- First it looks like a dead end too: Because of the safety precautions taken, placing the payload diretcly in the **Registration Form** is not possible.
+- First it looks like the wrong path too: Because of the safety precautions taken, placing the payload diretcly in the **Registration Form** is not possible.
 - Choose the indirect route to place the payload in the request:
     - Open **Burpsuite** and the **Proxy Browser**
     - Browse to the **OWASP Juice Shop's register page**:
@@ -88,7 +88,7 @@
     <img alt="payload_response" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/payload_response.png"></img>
 
 
-### Step 4: Did it work? Yesssss :)
+### Step 4: Did it work?
 - Go back to the administration page (not proxy server) and refresh it. The JavaScript code runs correctly - an **alert window** appears and its message says: `xss`.  
 <img alt="popup" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/popup.png"></img>
 

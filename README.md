@@ -5,9 +5,9 @@ The content is created as part of my training at the **Developer Academy** and i
 
 ## Table of Contents
 1. <a href="#introducing-the-owasp-juice-shop">Introducing the OWASP Juice Shop</a>   
-    - <a href="#what-is-a-owasp-juice-shop-and-what-can-i-buy-there">What is a OWASP Juice Shop and what can I buy there?</a>
-    - <a href="#what-is-a-owasp-top-ten">What is a OWASP Top Ten?</a>
-2. <a href="#what-vulnerabilities-lurk-in-web-applications-and-why-should-I-care">What vulnerabilities lurk in web applications and why should I care?</a>  
+    - <a href="#what-is-the-owasp-juice-shop">What is a OWASP Juice Shop?</a>
+    - <a href="#what-are-the-owasp-top-ten">What are the OWASP Top Ten?</a>
+2. <a href="#what-vulnerabilities-lurk-in-web-applications">What vulnerabilities lurk in web applications?</a>  
     - <a href="#1-improper-input-validation">Improper Input Validation</a>
     - <a href="#2-broken-authentication">Broken Authentication</a>
     - <a href="#3-xss---cross-site-scripting">XSS - Cross-Site Scripting</a>
@@ -15,15 +15,15 @@ The content is created as part of my training at the **Developer Academy** and i
 
 
 ## Introducing the OWASP Juice Shop
-### What is a OWASP Juice Shop and what can I buy there?
-<ins>Disclaimer</ins>: I'm sorry, but the OWASP Juice Shop is not a juice shop and you can not buy juice or anything else there. But it keeps the promise of being a really bad online shop. So bad that you can even learn something - about **Web Application Security Risks**.
+### What is the OWASP Juice Shop?
+The OWASP Juice Shop is not a juice shop and you can not buy juice or anything else there. But it keeps the promise of being a really bad online shop. So bad that you can even learn something - about **Web Application Security Risks**.
 
 > OWASP Juice Shop is probably the most modern and sophisticated insecure web application! It can be used in security trainings, awareness demos, CTFs and as a guinea pig for security tools! Juice Shop encompasses vulnerabilities from the entire OWASP Top Ten along with many other security flaws found in real-world applications!
 <a href="https://owasp.org/www-project-juice-shop/">More Information</a>.
 
 You want to solve the tasks by yourself? <a href="https://github.com/juice-shop/juice-shop">More Information</a>
 
-### What is a OWASP Top Ten?
+### What are the OWASP Top Ten?
 The OWASP Top Ten is a list of the most common and critical web application security risks. It is created and regularly updated by the Open Web Application Security Project (OWASP) community. The list serves as a guide for developers, security analysts and companies to improve the security of their applications.
 
 > Companies should adopt this document and start the process of ensuring that their web applications minimize these risks. Using the OWASP Top 10 is perhaps the most effective first step towards changing the software development culture within your organization into one that produces more secure code.
@@ -31,7 +31,7 @@ The OWASP Top Ten is a list of the most common and critical web application secu
 
 
 
-## What vulnerabilities lurk in web applications and why should I care?
+## What vulnerabilities lurk in web applications?
 The information about the security vulnerabilities was provided by **ChatGPT**.  
   
 You will find the links to the appropriate challenges in the text.

@@ -65,8 +65,8 @@ OR
             ```
             <img alt="Zatschi" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/bjoern's_favorite_pet/zatschi.png"></img>
         - The three legged cat that is shown there is called **Zatschi**.
-            - >i: This is a dead end here. It's the right cat but Zatschi is her pet name, not the pet's name. Haha, how ironic.
-    - If all else fails, ask Daddy Google and his image search option:
+            - >i: This path does not lead to results. It's the right cat but Zatschi is her pet name, not the pet's name.
+    - Use the **Google** image search:
         - Search query: `björn kimminich owasp`
         - <ins>Result</ins>: An Instagram post from **@bkimminich** that shows Zatschi alias `Zaya`.  
         <img alt="Zaya" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/bjoern's_favorite_pet/zaya.png"></img>
