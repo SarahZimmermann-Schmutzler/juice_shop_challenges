@@ -2,7 +2,7 @@
 <a href="https://go.screenpal.com/watch/cTVjQYnez47">Watch the video to this challenge</a>
 
 ## Table of Contents
-1. <a href="#profile">Profile</a>  
+1. <a href="#challenge-overview">Challenge Overview</a>  
 2. <a href="#what-do-you-need-to-solve-the-challenge">What do you need to solve the challenge?</a>  
 3. <a href="#solution">Solution</a> 
     - <a href="#step-1-register-a-dummy-user-and-have-a-look-at-the-http-response">Register a dummy user and have a look at the HTTP response</a>
@@ -11,7 +11,7 @@
     - <a href="#step-4-check-the-success">Check the success</a>
 4. <a href="#summary">Summary</a> 
 
-## Profile
+## Challenge Overview
 #### Difficulty
 - 3-Star-Challenge
 
