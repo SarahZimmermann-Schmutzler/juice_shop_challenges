@@ -5,11 +5,11 @@
 1. <a href="#profile">Profile</a>  
 2. <a href="#what-do-you-need-to-solve-the-challenge">What do you need to solve the challenge?</a>  
 3. <a href="#solution">Solution</a> 
-    - <a href="#step-0-doing-the-xss-what">Doing the XSS what?</a>
+    - <a href="#step-0-what-is-xss">What is XSS?</a>
     - <a href="#step-1-login-with-admin-status-and-examine-the-admin-section">Login with admin status and examine the admin section</a>
-    - <a href="#step-2-it-has-to-be-placed-at-the-customer-feedback-spoiler-this-is-the-wrong-way">It has to be placed at the Customer Feedback! (Spoiler: This is the wrong way.)</a>
-    - <a href="#step-3-placing-the-payload-at-the-registered-users-via-the-registration-form">Placing the payload at the Registered Users via the Registration Form</a>
-    - <a href="#step-4-did-it-work">Did it work?</a>
+    - <a href="#hypothesis-it-has-to-be-placed-at-the-customer-feedback">It has to be placed at the Customer Feedback!</a>
+    - <a href="#step-2-placing-the-payload-at-the-registered-users-via-the-registration-form">Placing the payload at the Registered Users via the Registration Form</a>
+    - <a href="#step-3-check-the-success">Check the success</a>
 4. <a href="#summary">Summary</a> 
 
 ## Profile
@@ -41,7 +41,7 @@
     - HTTP history
 
 ## Solution
-### Step 0: Doing the XSS what?
+### Step 0: What is XSS?
 - This task is about **persistent XSS (Cross-Site Scripting)**:
     - The attacker permanently stores malicious code on the server, e.g. in a database.
     - When users visit the infected site, the malicious code is automatically executed.
@@ -65,14 +65,14 @@
     ```
     - <ins>What do you find here?</ins> The page shows the `Registered Users` and the `Customer Feedback`.
 
-### Step 2: It has to be placed at the **Customer Feedback**! (Spoiler: This is the wrong way.)
+### Hypothesis: It has to be placed at the **Customer Feedback**!
 - Looking at **Step 0** the `Customer Feedback` feels like the perfect source to put the payload.
-- But it turns out, no. The JavaScript code could be placed in the feedback form but the server-side validation works as it should and filters out the code.  
+- <ins>But it turns out, no</ins>. The JavaScript code could be placed in the feedback form but the server-side validation works as it should and filters out the code.  
 <img alt="feedback_form" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/feedback_form.png"></img>  
 <img alt="feedback_request_and_response" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/feedback_response.png"></img>
 
 
-### Step 3: Placing the payload at the Registered Users via the **Registration Form**
+### Step 2: Placing the payload at the Registered Users via the **Registration Form**
 - First it looks like the wrong path too: Because of the safety precautions taken, placing the payload diretcly in the **Registration Form** is not possible.
 - Choose the indirect route to place the payload in the request:
     - Open **Burpsuite** and the **Proxy Browser**
@@ -88,7 +88,7 @@
     <img alt="payload_response" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/payload_response.png"></img>
 
 
-### Step 4: Did it work?
+### Step 3: Check the success
 - Go back to the administration page (not proxy server) and refresh it. The JavaScript code runs correctly - an **alert window** appears and its message says: `xss`.  
 <img alt="popup" src="https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection/popup.png"></img>
 
