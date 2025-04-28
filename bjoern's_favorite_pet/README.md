@@ -74,7 +74,7 @@ OR
             ```bash
             http://127.0.0.1:3000/#/photo-wall
             ```
-            ![Zatschi](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/bjoern's_favorite_pet/zatschi.png)
+        ![Zatschi](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/bjoern's_favorite_pet/zatschi.png)
 
     * The three legged cat that is shown there is called **Zatschi**.
       * >i: This path does not lead to results. It's the right cat but Zatschi is her pet name, not the pet's name.
