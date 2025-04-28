@@ -71,9 +71,11 @@ OR
 * Now the clue says Björn's pet can be seen on a photo or in a video.
   * The one-star task called `Missing Encoding` involves making a cat photo visible in the photo gallery.
     * So, have a look at the photo wall:
-            ```bash
-            http://127.0.0.1:3000/#/photo-wall
-            ```
+
+        ```bash
+        http://127.0.0.1:3000/#/photo-wall
+        ```
+
         ![Zatschi](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/bjoern's_favorite_pet/zatschi.png)
 
     * The three legged cat that is shown there is called **Zatschi**.
