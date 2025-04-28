@@ -36,7 +36,7 @@
 
 * Using the payload ```<iframe src=\"javascript:alert(`xss`)\">```, ensure that the administrator receives the following message in the *administration section*:
 
-![alert](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/alert.png)
+    ![alert](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/alert.png)
 
 * Select a suitable source and sink. To do this, take a close look at the administration section and think about what could have triggered the message.
 
@@ -63,9 +63,11 @@
 ### Step 1: Login with admin status and examine the admin section
 
 * First of all the administration section needs to be examined. **Login** at the **OWASP Jucie Shop** with the admin account or an user account that has admin status to unlock the administration page:
-        ```bash
-        http://127.0.0.1:3000/#/login
-        ```
+
+    ```bash
+    http://127.0.0.1:3000/#/login
+    ```
+
   * In the task `Admin Registration` a user was registered with admin status, so this account can be used:
     * <ins>Email</ins>: `kazuto@kirigaia.saop`
     * <ins>Password</ins>: `abc123`
@@ -74,9 +76,11 @@
     * <ins>Password</ins>: `admin123`
 
 * Switch to the **administration page** that is now unlocked:  
-        ```bash
-        http://127.0.0.1:3000/#/administration
-        ```
+
+    ```bash
+    http://127.0.0.1:3000/#/administration
+    ```
+
   * <ins>What do you find here?</ins> The page shows the `Registered Users` and the `Customer Feedback`.
 
 ### Hypothesis: It has to be placed at the **Customer Feedback**!
@@ -84,9 +88,9 @@
 * Looking at **Step 0** the `Customer Feedback` feels like the perfect source to put the payload.
 * <ins>But it turns out, no</ins>. The JavaScript code could be placed in the feedback form but the server-side validation works as it should and filters out the code.
 
-![feedback_form](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/feedback_form.png)
+    ![feedback_form](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/feedback_form.png)
 
-![feedback_request_and_response](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/feedback_response.png)
+    ![feedback_request_and_response](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/feedback_response.png)
 
 ### Step 2: Placing the payload at the Registered Users via the **Registration Form**
 
@@ -94,9 +98,11 @@
 * Choose the indirect route to place the payload in the request:
   * Open **Burpsuite** and the **Proxy Browser**
   * Browse to the **OWASP Juice Shop's register page**:
-        ```bash
-        http://127.0.0.1:3000/#/register
-        ```
+
+    ```bash
+    http://127.0.0.1:3000/#/register
+    ```
+
     * Fill in some dummy-data. Before clicking the *Register Button*, switch on the **Intercept mode** in the Burpsuite window to intercept the data that the form will send.
     * Find the request payload and change the parameter `"email": "your_dummy@data"` to ```"email": "<iframe src=\"javascript:alert(`xss`)\">"```  
 
@@ -111,15 +117,15 @@
 
 * Go back to the administration page (not proxy server) and refresh it. The JavaScript code runs correctly - an **alert window** appears and its message says: `xss`.
 
-![popup](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/popup.png)
+    ![popup](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/popup.png)
 
 * The table of the Registered User looks like this:
 
-![table_registered_user](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/table.png)
+    ![table_registered_user](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/table.png)
 
 * And the the details of the xss-User like that:
 
-![details_xss_user](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/details.png)
+    ![details_xss_user](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/juice_shop_challenges/main/client_side_xss_protection/details.png)
 
 ## Summary
 
