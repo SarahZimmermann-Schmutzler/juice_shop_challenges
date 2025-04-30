@@ -225,4 +225,4 @@ A successful attack on authentication mechanisms can grant attackers full access
 | Björn's Favorite Pet | Broken Authentication | Reset the password of Bjoern's OWASP account via the Forgot Password mechanism with the original answer to his security question. | [Björn's Favorite Pet](https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/bjoern's_favorite_pet) |
 | Client-side XSS Protection | XSS | Perform a persisted XSS attack with ```<iframe src=\"javascript:alert(`xss`)\">``` bypassing a client-side security mechanism. | [Client-side XSS Protection](https://github.com/SarahZimmermann-Schmutzler/juice_shop_challenges/blob/main/client_side_xss_protection) |
 
-* Test
+-------
